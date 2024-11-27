@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   snake:
-    image: 'ambrsrio0812/chatapp:latest'
+    image: 'ambrsrio0812/snykchatapp:latest'
     environment:
       - "PORT:3000"
     ports:
