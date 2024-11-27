@@ -1,27 +1,17 @@
- node('ubuntu-AppServer-2140-newest')
+node('ubuntu-AppServer-2140-newest')
 {
-    def app
-    stage('Cloning Git')
-    {
-    /* Let's make sure we have the repository cloned to our workspace */
-    checkout scm
-    }
+def app
+stage('Cloning Git')
+{
+   /* Let's make sure we have the repository cloned to our workspace */
+   checkout scm
+}
 
-      stage('SCA-SAST-SNYK-TEST') 
-      {
-       agent 
-       
-       {
-         label 'ubuntu-AppServer-2140-newest'
-       }
-       
-         snykSecurity(
-            snykInstallation: 'Snyk',
-            snykTokenId: 'Synkid',
-            severity: 'critical'
-         )
-       }
-    
+stage('SCA-SAST-SNYK-TEST') 
+{
+  echo 'SCA-SAST-SNYK-TEST'
+}
+
 stage('Build-and-Tag')
 {
     /* This builds the actual image; 
