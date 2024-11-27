@@ -1,1 +1,1 @@
-# Snyk-ChatApp
+# NodejsChatApp
