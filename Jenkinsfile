@@ -16,7 +16,7 @@ stage('Build-and-Tag')
 {
     /* This builds the actual image; 
          * This is synonymous to docker build on the command line */
-    app = docker.build('ambrsrio0812/chatapp')
+    app = docker.build('ambrsrio0812/snykchatapp')
 }
 
 stage('Post-to-dockerhub')
