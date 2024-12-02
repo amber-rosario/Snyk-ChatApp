@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-  snake:
+  chatapp:
     image: 'ambrsrio0812/snykchatapp:latest'
     environment:
       - "PORT:3700"
@@ -8,3 +8,4 @@ services:
       - "80:3700"
     volumes:
       - ./:/app
+    restart: always
