@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   chatapp:
-    image: 'ambrsrio0812/snykchatapp:latest'
+    image: 'ambrsrio0812/chatapp:latest'
     environment:
       - "PORT:3700"
     ports:
