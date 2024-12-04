@@ -8,9 +8,16 @@ stage('Cloning Git')
 }
 
 stage('SCA-SAST-SNYK-TEST') 
-{
-  echo 'SCA-SAST-SNYK-TEST'
-}
+        {
+            agent any
+            steps 
+            {
+                script 
+                {
+                    snykSecurity(snykInstallation: 'Snyk', snykTokenId: 'my-org-snyk-api-token', severity: 'critical')
+                }
+            }
+        }
 
 stage('Build-and-Tag')
 {
